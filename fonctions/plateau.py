@@ -52,4 +52,4 @@ def charge_plateau_vide(ordre, points):
     texte(900, 350, "Vert : 0", tag="points")
     texte(900, 450, "Bleu : 0", tag="points")
 
-    return plateau, ordre, points
+    return plateau
