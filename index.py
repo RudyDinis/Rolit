@@ -1,6 +1,4 @@
 #Bibliothèques
-import time
-import random
 from fltk import *
 
 #Fonctions
@@ -20,7 +18,7 @@ cree_fenetre(1200, 1000)
 
 #Apelle le module ordre_joueur avec comme arg le nb de joueurs
 ordre = ordre_joueur(4)
-plateau = charge_plateau_vide(ordre, points) #charge le plateau
+plateau = charge_plateau_vide(ordre) #charge le plateau
 
 texte(90, 10, "au tour du joueur : " + list(ordre[0].keys())[0], couleur="black", taille=40, tag="tour_joueur") # affiche le premier joueur
 
@@ -39,4 +37,3 @@ while True:
     mise_a_jour()
 
 ferme_fenetre()
-
