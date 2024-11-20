@@ -41,10 +41,10 @@ def ordre_joueur(playerNB):
             nombres_disponibles.remove(nb)
 
             dessiner_de(nb, i * 300)
-            texte(i * 300 + 90, -10, list(couleurs[i].keys())[0], couleur="red", taille=40, tag="ordre_joueur")
+            texte(i * 300 + 100, -10, list(couleurs[i].keys())[0], couleur="red", taille=40, tag="ordre_joueur")
 
             ordre_temp[i] = nb
-        time.sleep(0)
+        time.sleep(1)
     for i in range(playerNB):
         min_value = min(ordre_temp)
         min_index = ordre_temp.index(min_value)
@@ -52,10 +52,12 @@ def ordre_joueur(playerNB):
         ordre_temp.remove(min_value)
 
 
-    time.sleep(0)
+    time.sleep(0.5)
     efface("ordre_joueur")
     efface("nombre")
     return ordre
+
+
 
 def calcul_points(plateau):
     points = {"Rouge": 0, "Jaune": 0, "Vert": 0, "Bleu": 0}
